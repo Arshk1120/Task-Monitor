@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Monitor by Arshdeep Kour</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #a4cee6;
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+.container {
+    background: rgb(173, 212, 233);
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="date"], select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #8eace3;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #9bb5e3;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #87aae6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #c9c4c4;
+}
+
+.delete-btn {
+    background-color: rgb(0, 153, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background-color: #87aae6;
+}
+
+
+</style>
+<body>
+    <center>
+        <div class="container">
+            <h1>TASK MONITOR</h1>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Add a new task..." required>
+                <input type="date" id="dateInput" required>
+                <select id="priorityInput">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <select id="statusInput">
+                    <option value="New">New</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="taskList"></ul>
+        </div>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
